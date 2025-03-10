@@ -1,16 +1,26 @@
 {
-  "name": "test-mcp",
-  "version": "1.0.0",
-  "description": "Test project for MCP implementation",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "node tests/index.test.js"
+  "name": "mcp-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server example",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "mcp-server": "./build/index.js"
   },
-  "keywords": [
-    "test",
-    "mcp"
+  "files": [
+    "build"
   ],
-  "author": "",
-  "license": "MIT"
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
 }
