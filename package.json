@@ -1,0 +1,16 @@
+{
+  "name": "test-mcp",
+  "version": "1.0.0",
+  "description": "Test project for MCP implementation",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node tests/index.test.js"
+  },
+  "keywords": [
+    "test",
+    "mcp"
+  ],
+  "author": "",
+  "license": "MIT"
+}
