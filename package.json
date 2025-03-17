@@ -5,22 +5,25 @@
     "private": true,
     "type": "module",
     "bin": {
-      "mcp-server": "./build/index.js"
+        "mcp-server": "./build/index.js"
     },
     "files": [
-      "build"
+        "build"
     ],
     "scripts": {
-      "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-      "prepare": "npm run build",
-      "watch": "tsc --watch",
-      "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+        "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+        "prepare": "npm run build",
+        "watch": "tsc --watch",
+        "inspector": "npx @modelcontextprotocol/inspector build/index.js"
     },
     "dependencies": {
-      "@modelcontextprotocol/sdk": "0.6.0"
+        "@modelcontextprotocol/sdk": "0.6.0",
+        "dotenv": "^16.4.7",
+        "ssh2": "^1.16.0"
     },
     "devDependencies": {
-      "@types/node": "^20.11.24",
-      "typescript": "^5.3.3"
+        "@types/node": "^20.11.24",
+        "@types/ssh2": "^1.15.4",
+        "typescript": "^5.3.3"
     }
-  }
+}
